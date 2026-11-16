@@ -1,0 +1,67 @@
+# Spiegelt die öffentlichen Analytics-Pioneers-Trainings täglich von GitLab nach GitHub,
+# damit der wöchentliche Fach-Radar (Claude) sie lesen kann.
+# Ablage im Spiegel-Repo: .github/workflows/mirror.yml
+
+name: Sync Analytics Pioneers (GitLab → GitHub)
+
+on:
+  schedule:
+    - cron: "17 4 * * *"   # täglich 04:17 UTC (05:17 Uhr Berlin im Winter)
+  workflow_dispatch: {}     # manuell startbar über den Actions-Tab
+
+permissions:
+  contents: write
+
+concurrency:
+  group: mirror
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    env:
+      UPSTREAM: https://gitlab.com/mstade81/analytics-pioneers-community-trainings.git
+    steps:
+      - name: Spiegel-Repo auschecken
+        uses: actions/checkout@v4
+
+      - name: Upstream von GitLab holen
+        run: git clone --filter=blob:none "$UPSTREAM" /tmp/upstream
+
+      - name: Inhalte nach content/ synchronisieren und Changelog schreiben
+        run: |
+          rm -rf content
+          mkdir content
+          cp -a /tmp/upstream/. content/
+          rm -rf content/.git
+
+          NEW_SHA=$(git -C /tmp/upstream rev-parse HEAD)
+          OLD_SHA=$(cat UPSTREAM_SHA 2>/dev/null || true)
+
+          if [ "$NEW_SHA" != "$OLD_SHA" ]; then
+            {
+              echo "## Sync $(date -u +%Y-%m-%d) – upstream ${NEW_SHA:0:8}"
+              if [ -n "$OLD_SHA" ] && git -C /tmp/upstream cat-file -e "$OLD_SHA" 2>/dev/null; then
+                git -C /tmp/upstream log --date=short --format='- %ad %h %s' "$OLD_SHA..$NEW_SHA"
+              else
+                git -C /tmp/upstream log -20 --date=short --format='- %ad %h %s'
+              fi
+              echo
+            } > /tmp/entry.md
+            touch UPSTREAM_CHANGELOG.md
+            cat /tmp/entry.md UPSTREAM_CHANGELOG.md > /tmp/changelog.md
+            mv /tmp/changelog.md UPSTREAM_CHANGELOG.md
+            echo "$NEW_SHA" > UPSTREAM_SHA
+          fi
+
+      - name: Committen und pushen (nur bei Änderungen)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Keine Änderungen seit dem letzten Sync."
+          else
+            git commit -m "Sync Analytics Pioneers $(date -u +%Y-%m-%d)"
+            git push
+          fi
