@@ -1,0 +1,2067 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2025-03-24 08:18:52",
+    "containerVersion": {
+        "path": "accounts/4701768861/containers/33231840/versions/78",
+        "accountId": "4701768861",
+        "containerId": "33231840",
+        "containerVersionId": "78",
+        "name": "Blocking Trigger - to be deployed",
+        "container": {
+            "path": "accounts/4701768861/containers/33231840",
+            "accountId": "4701768861",
+            "containerId": "33231840",
+            "name": "2 - CSGTM - demo.analytics-pioneers.com",
+            "publicId": "GTM-PZZ7GN9",
+            "usageContext": [
+                "WEB"
+            ],
+            "fingerprint": "1698421599384",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/4701768861/containers/33231840/workspaces?apiLink=container",
+            "features": {
+                "supportUserPermissions": true,
+                "supportEnvironments": true,
+                "supportWorkspaces": true,
+                "supportGtagConfigs": false,
+                "supportBuiltInVariables": true,
+                "supportClients": false,
+                "supportFolders": true,
+                "supportTags": true,
+                "supportTemplates": true,
+                "supportTriggers": true,
+                "supportVariables": true,
+                "supportVersions": true,
+                "supportZones": true,
+                "supportTransformations": false
+            },
+            "tagIds": [
+                "GTM-PZZ7GN9"
+            ]
+        },
+        "tag": [
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "tagId": "808",
+                "name": "Google Ads | Remarketing",
+                "type": "sp",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableConversionLinker",
+                        "value": "true"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableDynamicRemarketing",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionCookiePrefix",
+                        "value": "_gcl"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionId",
+                        "value": "734673188"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "customParamsFormat",
+                        "value": "NONE"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "rdp",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1742217634325",
+                "firingTriggerId": [
+                    "875"
+                ],
+                "blockingTriggerId": [
+                    "900"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_NEEDED"
+                }
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "tagId": "813",
+                "name": "Google Ads | Conversion - purchase",
+                "type": "awct",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableNewCustomerReporting",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableConversionLinker",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "orderId",
+                        "value": "{{DLV | ecommerce.transaction_id}}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableProductReporting",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableEnhancedConversion",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionValue",
+                        "value": "{{DLV | ecommerce.value}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionCookiePrefix",
+                        "value": "_gcl"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableShippingData",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionId",
+                        "value": "734673188"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "currencyCode",
+                        "value": "{{DLV | ecommerce.currency}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionLabel",
+                        "value": "WngACNmFmpsCEKTyqN4C"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "rdp",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1742217613102",
+                "firingTriggerId": [
+                    "810"
+                ],
+                "blockingTriggerId": [
+                    "900"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_NEEDED"
+                }
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "tagId": "821",
+                "name": "GA4 | Config (Set-up Page View)",
+                "type": "googtag",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "tagId",
+                        "value": "{{Const | GA4 ID Production G-Y4S182HK40}}"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "configSettingsTable",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "send_page_view"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "false"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventSettingsVariable",
+                        "value": "{{GA4 | Event Settings & User Properties}}"
+                    }
+                ],
+                "fingerprint": "1742216321178",
+                "tagFiringOption": "ONCE_PER_LOAD",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_NEEDED"
+                }
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "tagId": "822",
+                "name": "GA4 | Event - begin_checkout",
+                "type": "gaawe",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "sendEcommerceData",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enhancedUserId",
+                        "value": "false"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "eventSettingsTable",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "items"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{DLV | ecommerce.items}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "value"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{DLV | ecommerce.value}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "currency"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{DLV | ecommerce.currency}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventName",
+                        "value": "begin_checkout"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "measurementIdOverride",
+                        "value": "{{Const | GA4 ID Production G-Y4S182HK40}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventSettingsVariable",
+                        "value": "{{GA4 | Event Settings & User Properties}}"
+                    }
+                ],
+                "fingerprint": "1742217524739",
+                "firingTriggerId": [
+                    "836"
+                ],
+                "blockingTriggerId": [
+                    "899"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_NEEDED"
+                }
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "tagId": "824",
+                "name": "Google Ads | Conversion - add_to_cart",
+                "type": "awct",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableNewCustomerReporting",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableConversionLinker",
+                        "value": "true"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableProductReporting",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableEnhancedConversion",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionValue",
+                        "value": "{{DLV | ecommerce.value}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionCookiePrefix",
+                        "value": "_gcl"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableShippingData",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionId",
+                        "value": "734673188"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "currencyCode",
+                        "value": "{{DLV | ecommerce.currency}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionLabel",
+                        "value": "j6-wCPW4t50aEKTyqN4C"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "rdp",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1742217604431",
+                "firingTriggerId": [
+                    "823"
+                ],
+                "blockingTriggerId": [
+                    "900"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_NEEDED"
+                }
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "tagId": "825",
+                "name": "GA4 | Event - purchase",
+                "type": "gaawe",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "sendEcommerceData",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "getEcommerceDataFrom",
+                        "value": "dataLayer"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enhancedUserId",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventName",
+                        "value": "purchase"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "measurementIdOverride",
+                        "value": "{{Const | GA4 ID Production G-Y4S182HK40}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventSettingsVariable",
+                        "value": "{{GA4 | Event Settings & User Properties}}"
+                    }
+                ],
+                "fingerprint": "1742217557262",
+                "firingTriggerId": [
+                    "810"
+                ],
+                "blockingTriggerId": [
+                    "899"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_NEEDED"
+                }
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "tagId": "829",
+                "name": "HTML | Facebook Purchase",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\nfbq('track', 'Purchase',\n  // begin parameter object data\n  {\n    value: {{DLV | ecommerce.value}},\n    currency: {{DLV | ecommerce.currency}},\n    contents: {{CJS | contents - Facebook}},\n    content_type: 'product'\n  }\n  // end parameter object data\n);\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1742217675614",
+                "firingTriggerId": [
+                    "810"
+                ],
+                "blockingTriggerId": [
+                    "901"
+                ],
+                "setupTag": [
+                    {
+                        "tagName": "HTML | Facebook Pixel (Set-up Page View)"
+                    }
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_NEEDED"
+                }
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "tagId": "831",
+                "name": "GA4 | Event - click_navigation",
+                "type": "gaawe",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "sendEcommerceData",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enhancedUserId",
+                        "value": "false"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "eventSettingsTable",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "click_text"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{Click Text}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventName",
+                        "value": "click_navigation"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "measurementIdOverride",
+                        "value": "{{Const | GA4 ID Production G-Y4S182HK40}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventSettingsVariable",
+                        "value": "{{GA4 | Event Settings & User Properties}}"
+                    }
+                ],
+                "fingerprint": "1742217535259",
+                "firingTriggerId": [
+                    "830"
+                ],
+                "blockingTriggerId": [
+                    "899"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_NEEDED"
+                }
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "tagId": "832",
+                "name": "HTML | Facebook Pixel (Set-up Page View)",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<!-- Meta Pixel Code -->\n<script>\n!function(f,b,e,v,n,t,s)\n{if(f.fbq)return;n=f.fbq=function(){n.callMethod?\nn.callMethod.apply(n,arguments):n.queue.push(arguments)};\nif(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';\nn.queue=[];t=b.createElement(e);t.async=!0;\nt.src=v;s=b.getElementsByTagName(e)[0];\ns.parentNode.insertBefore(t,s)}(window, document,'script',\n'https://connect.facebook.net/en_US/fbevents.js');\n  \nfbq('set', 'autoConfig', false, '1556547001244760'); // Disable Auto Events\nfbq('init', '876692077865695');\nfbq.allowDuplicatePageViews = true; // Enable Custom SPA\nfbq.disablePushState = true; // Disable Auto SPA\n</script>\n<!-- End Meta Pixel Code -->"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1742207688680",
+                "tagFiringOption": "ONCE_PER_LOAD",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_NEEDED"
+                }
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "tagId": "833",
+                "name": "HTML | Facebook Pageview",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\nfbq('track', 'PageView');\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1742217663727",
+                "firingTriggerId": [
+                    "875"
+                ],
+                "blockingTriggerId": [
+                    "901"
+                ],
+                "setupTag": [
+                    {
+                        "tagName": "HTML | Facebook Pixel (Set-up Page View)",
+                        "stopOnSetupFailure": true
+                    }
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_NEEDED"
+                }
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "tagId": "834",
+                "name": "Google Ads | Conversion Linker",
+                "type": "gclidw",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableCrossDomain",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableUrlPassthrough",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableCookieOverrides",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1742217624705",
+                "firingTriggerId": [
+                    "875"
+                ],
+                "blockingTriggerId": [
+                    "900"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_NEEDED"
+                }
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "tagId": "837",
+                "name": "GA4 | Event - add_to_cart",
+                "type": "gaawe",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "sendEcommerceData",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enhancedUserId",
+                        "value": "false"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "eventSettingsTable",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "items"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{DLV | ecommerce.items}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "value"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{DLV | ecommerce.value}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "currency"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{DLV | ecommerce.currency}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventName",
+                        "value": "add_to_cart"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "measurementIdOverride",
+                        "value": "{{Const | GA4 ID Production G-Y4S182HK40}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventSettingsVariable",
+                        "value": "{{GA4 | Event Settings & User Properties}}"
+                    }
+                ],
+                "fingerprint": "1742217512658",
+                "firingTriggerId": [
+                    "823"
+                ],
+                "blockingTriggerId": [
+                    "899"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_NEEDED"
+                }
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "tagId": "843",
+                "name": "GA4 | Event - view_item",
+                "type": "gaawe",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "sendEcommerceData",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enhancedUserId",
+                        "value": "false"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "eventSettingsTable",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "items"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{DLV | ecommerce.items}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "value"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{DLV | ecommerce.value}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "currency"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{DLV | ecommerce.currency}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventName",
+                        "value": "view_item"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "measurementIdOverride",
+                        "value": "{{Const | GA4 ID Production G-Y4S182HK40}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventSettingsVariable",
+                        "value": "{{GA4 | Event Settings & User Properties}}"
+                    }
+                ],
+                "fingerprint": "1742218491621",
+                "firingTriggerId": [
+                    "842"
+                ],
+                "blockingTriggerId": [
+                    "899"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_NEEDED"
+                }
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "tagId": "859",
+                "name": "Microsoft Ads | Base Tag",
+                "type": "baut",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "c_navTimingApi",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "tagId",
+                        "value": "123"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "c_consentInheritGtm",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "c_storeConvTrackCookies",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "uetqName",
+                        "value": "uetq"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "c_removeQueryFromUrls",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "c_disableAutoPageView",
+                        "value": "true"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "c_enhancedConversion",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "c_consentUpdates",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventType",
+                        "value": "PAGE_LOAD"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "c_enableAutoSpaTracking",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1742218491620",
+                "firingTriggerId": [
+                    "875"
+                ],
+                "blockingTriggerId": [
+                    "902"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_NEEDED"
+                }
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "tagId": "861",
+                "name": "HTML | Facebook ViewContent",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\nfbq('track', 'ViewContent');\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1742217686316",
+                "firingTriggerId": [
+                    "842"
+                ],
+                "blockingTriggerId": [
+                    "901"
+                ],
+                "setupTag": [
+                    {
+                        "tagName": "HTML | Facebook Pixel (Set-up Page View)",
+                        "stopOnSetupFailure": true
+                    }
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_NEEDED"
+                }
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "tagId": "877",
+                "name": "Template - backtrack",
+                "type": "cvt_M3K8T",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "positive_regex",
+                        "value": "^(?!gtm|consent|Optanon|OneTrust|cookie_consent).*$"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "prevent_recursive_merge",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1742218491641",
+                "firingTriggerId": [
+                    "875"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_NEEDED"
+                }
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "tagId": "878",
+                "name": "GA4 | Event - page_view",
+                "type": "gaawe",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "sendEcommerceData",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enhancedUserId",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventName",
+                        "value": "page_view"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "measurementIdOverride",
+                        "value": "{{Const | GA4 ID Production G-Y4S182HK40}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventSettingsVariable",
+                        "value": "{{GA4 | Event Settings & User Properties}}"
+                    }
+                ],
+                "fingerprint": "1742217547275",
+                "firingTriggerId": [
+                    "875"
+                ],
+                "blockingTriggerId": [
+                    "899"
+                ],
+                "setupTag": [
+                    {
+                        "tagName": "GA4 | Config (Set-up Page View)"
+                    }
+                ],
+                "tagFiringOption": "ONCE_PER_LOAD",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_NEEDED"
+                }
+            }
+        ],
+        "trigger": [
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "triggerId": "810",
+                "name": "DLE | purchase",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "purchase"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1739441127567"
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "triggerId": "823",
+                "name": "DLE | add_to_cart",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "add_to_cart"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1739441127568"
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "triggerId": "830",
+                "name": "Element Click | click_navigation",
+                "type": "CLICK",
+                "filter": [
+                    {
+                        "type": "CSS_SELECTOR",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Click Element}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": ".woocommerce-MyAccount-navigation-link *"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1739441127602"
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "triggerId": "836",
+                "name": "DLE | begin_checkout",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "begin_checkout"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1739526057393"
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "triggerId": "842",
+                "name": "DLE | view_item",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "view_item"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1739961470740"
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "triggerId": "875",
+                "name": "DLE | consent_status",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "consent_status"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1742206649683"
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "triggerId": "899",
+                "name": "Blocking - GA4 Consent not given",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": ".*"
+                            }
+                        ]
+                    }
+                ],
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{DLV | GA4 Consent}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "true"
+                            },
+                            {
+                                "type": "BOOLEAN",
+                                "key": "negate",
+                                "value": "true"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1742217508771"
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "triggerId": "900",
+                "name": "Blocking - GAds Consent not given",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": ".*"
+                            }
+                        ]
+                    }
+                ],
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{DLV | Google Ads Consent}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "true"
+                            },
+                            {
+                                "type": "BOOLEAN",
+                                "key": "negate",
+                                "value": "true"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1742217596296"
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "triggerId": "901",
+                "name": "Blocking - FB Consent not given",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": ".*"
+                            }
+                        ]
+                    }
+                ],
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{DLV | Facebook Consent}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "true"
+                            },
+                            {
+                                "type": "BOOLEAN",
+                                "key": "negate",
+                                "value": "true"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1742217657909"
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "triggerId": "902",
+                "name": "Blocking - MS Consent not given",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": ".*"
+                            }
+                        ]
+                    }
+                ],
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{DLV | Microsoft Advertising Consent}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "true"
+                            },
+                            {
+                                "type": "BOOLEAN",
+                                "key": "negate",
+                                "value": "true"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1742217710299"
+            }
+        ],
+        "variable": [
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "variableId": "801",
+                "name": "JS | navigator.webdriver",
+                "type": "j",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "navigator.webdriver"
+                    }
+                ],
+                "fingerprint": "1729848588017",
+                "formatValue": {
+                    "convertNullToValue": {
+                        "type": "TEMPLATE",
+                        "value": "potential_bot_traffic"
+                    },
+                    "convertUndefinedToValue": {
+                        "type": "TEMPLATE",
+                        "value": "potential_bot_traffic"
+                    },
+                    "convertTrueToValue": {
+                        "type": "TEMPLATE",
+                        "value": "potential_bot_traffic"
+                    },
+                    "convertFalseToValue": {
+                        "type": "TEMPLATE",
+                        "value": "valid_traffic"
+                    }
+                }
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "variableId": "805",
+                "name": "DLV | OnetrustActiveGroups",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "OnetrustActiveGroups"
+                    }
+                ],
+                "fingerprint": "1739441127566",
+                "formatValue": {}
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "variableId": "809",
+                "name": "DLV | ecommerce.value",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "ecommerce.value"
+                    }
+                ],
+                "fingerprint": "1739441127566",
+                "formatValue": {}
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "variableId": "811",
+                "name": "DLV | ecommerce.currency",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "ecommerce.currency"
+                    }
+                ],
+                "fingerprint": "1739441127567",
+                "formatValue": {}
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "variableId": "812",
+                "name": "DLV | ecommerce.transaction_id",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "ecommerce.transaction_id"
+                    }
+                ],
+                "fingerprint": "1739441127567",
+                "formatValue": {}
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "variableId": "815",
+                "name": "RT | content_group",
+                "type": "remm",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "input",
+                        "value": "{{Page Path}}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "fullMatch",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "replaceAfterMatch",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "defaultValue",
+                        "value": "Unassigned"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "ignoreCase",
+                        "value": "true"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "map",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "product"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "Produkt"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "my-account"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "Account"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "cart"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "Warenkorb"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "checkout"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "Checkout"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "^/$"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "Home"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1739441127567",
+                "formatValue": {}
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "variableId": "816",
+                "name": "GA4 | Event Settings & User Properties",
+                "type": "gtes",
+                "parameter": [
+                    {
+                        "type": "LIST",
+                        "key": "eventSettingsTable",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "content_group"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{RT | content_group}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "gtm_version"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{Container Version}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "bot_detection"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{JS | navigator.webdriver}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "userProperties",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "name",
+                                        "value": "gtm_version"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{Container Version}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1739441127568"
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "variableId": "818",
+                "name": "Const | GA4 ID Production G-Y4S182HK40",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "G-Y4S182HK40"
+                    }
+                ],
+                "fingerprint": "1739441127568",
+                "formatValue": {}
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "variableId": "827",
+                "name": "DLV | ecommerce.items",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "ecommerce.items"
+                    }
+                ],
+                "fingerprint": "1739441127601",
+                "formatValue": {}
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "variableId": "828",
+                "name": "CJS | contents - Facebook",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function(){\n  var items = {{DLV | ecommerce.items}}.map(function(item){\n      return {\n        id: item.item_id,\n        quantity: item.quantity\n    }\n});\n    return items;\n}"
+                    }
+                ],
+                "fingerprint": "1739441127601",
+                "formatValue": {}
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "variableId": "863",
+                "name": "DLV | GA4 Consent",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "defaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "Google Analytics"
+                    }
+                ],
+                "fingerprint": "1742207149834",
+                "formatValue": {}
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "variableId": "864",
+                "name": "DLV | Facebook Consent",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "defaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "Facebook"
+                    }
+                ],
+                "fingerprint": "1742207154896",
+                "formatValue": {}
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "variableId": "868",
+                "name": "DLV | type",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "type"
+                    }
+                ],
+                "fingerprint": "1742207135616",
+                "formatValue": {}
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "variableId": "879",
+                "name": "DLV | Microsoft Advertising Consent",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "defaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "Microsoft Advertising"
+                    }
+                ],
+                "fingerprint": "1742207140288",
+                "formatValue": {}
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "variableId": "882",
+                "name": "DLV | Google Ads Consent",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "defaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "Google Ads"
+                    }
+                ],
+                "fingerprint": "1742207144689",
+                "formatValue": {}
+            }
+        ],
+        "builtInVariable": [
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "type": "PAGE_URL",
+                "name": "Page URL"
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "type": "PAGE_HOSTNAME",
+                "name": "Page Hostname"
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "type": "PAGE_PATH",
+                "name": "Page Path"
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "type": "REFERRER",
+                "name": "Referrer"
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "type": "EVENT",
+                "name": "Event"
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "type": "CLICK_ELEMENT",
+                "name": "Click Element"
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "type": "CLICK_ID",
+                "name": "Click ID"
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "type": "CLICK_TEXT",
+                "name": "Click Text"
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "type": "FORM_ID",
+                "name": "Form ID"
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "type": "CONTAINER_VERSION",
+                "name": "Container Version"
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "type": "DEBUG_MODE",
+                "name": "Debug Mode"
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "type": "CONTAINER_ID",
+                "name": "Container ID"
+            }
+        ],
+        "fingerprint": "1742218506558",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/4701768861/containers/33231840/versions/78?apiLink=version",
+        "customTemplate": [
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "templateId": "826",
+                "name": "Facebook Pixel",
+                "fingerprint": "1739441127569",
+                "templateData": "___TERMS_OF_SERVICE___\n\nBy creating or modifying this file you agree to Google Tag Manager's Community\nTemplate Gallery Developer Terms of Service available at\nhttps://developers.google.com/tag-manager/gallery-tos (or such other URL as\nGoogle may provide), as modified from time to time.\n\n\n___INFO___\n\n{\n  \"displayName\": \"Facebook Pixel\",\n  \"__wm\": \"VGVtcGxhdGUtQXV0aG9yX0ZhY2Vib29rLVNpbW8tQWhhdmE\\u003d\",\n  \"description\": \"This is an unofficial Google Tag Manager template for the Facebook Pixel.\",\n  \"securityGroups\": [],\n  \"categories\": [\n    \"ADVERTISING\",\n    \"ANALYTICS\"\n  ],\n  \"id\": \"cvt_temp_public_id\",\n  \"type\": \"TAG\",\n  \"version\": 1,\n  \"brand\": {\n    \"displayName\": \"facebookarchive\",\n    \"id\": \"github.com_facebookarchive\",\n    \"thumbnail\": \"data:image/png;base64,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\"\n  },\n  \"containerContexts\": [\n    \"WEB\"\n  ]\n}\n\n\n___TEMPLATE_PARAMETERS___\n\n[\n  {\n    \"alwaysInSummary\": true,\n    \"valueValidators\": [\n      {\n        \"errorMessage\": \"You must provide a Pixel ID\",\n        \"type\": \"NON_EMPTY\"\n      },\n      {\n        \"args\": [\n          \"^[0-9,]+$\"\n        ],\n        \"errorMessage\": \"Invalid Pixel ID format\",\n        \"type\": \"REGEX\"\n      }\n    ],\n    \"displayName\": \"Facebook Pixel ID(s)\",\n    \"simpleValueType\": true,\n    \"name\": \"pixelId\",\n    \"type\": \"TEXT\",\n    \"valueHint\": \"e.g. 12345678910\"\n  },\n  {\n    \"type\": \"CHECKBOX\",\n    \"name\": \"enhancedEcommerce\",\n    \"checkboxText\": \"Enhanced Ecommerce dataLayer Integration\",\n    \"simpleValueType\": true,\n    \"help\": \"If you check this, then the Facebook pixel will populate \\u003cstrong\\u003eEvent Name\\u003c/strong\\u003e and \\u003cstrong\\u003eObject Properties\\u003c/strong\\u003e automatically from the last \\u003ca href\\u003d\\\"https://developers.google.com/tag-manager/enhanced-ecommerce\\\"\\u003eecommerce\\u003c/a\\u003e object pushed into the dataLayer array.\"\n  },\n  {\n    \"type\": \"RADIO\",\n    \"name\": \"eventName\",\n    \"displayName\": \"Event Name\",\n    \"radioItems\": [\n      {\n        \"value\": \"standard\",\n        \"displayValue\": \"Standard\",\n        \"subParams\": [\n          {\n            \"type\": \"SELECT\",\n            \"name\": \"standardEventName\",\n            \"macrosInSelect\": false,\n            \"selectItems\": [\n              {\n                \"displayValue\": \"PageView\",\n                \"value\": \"PageView\"\n              },\n              {\n                \"displayValue\": \"AddPaymentInfo\",\n                \"value\": \"AddPaymentInfo\"\n              },\n              {\n                \"displayValue\": \"AddToCart\",\n                \"value\": \"AddToCart\"\n              },\n              {\n                \"displayValue\": \"AddToWishlist\",\n                \"value\": \"AddToWishlist\"\n              },\n              {\n                \"displayValue\": \"CompleteRegistration\",\n                \"value\": \"CompleteRegistration\"\n              },\n              {\n                \"displayValue\": \"Contact\",\n                \"value\": \"Contact\"\n              },\n              {\n                \"displayValue\": \"CustomizeProduct\",\n                \"value\": \"CustomizeProduct\"\n              },\n              {\n                \"displayValue\": \"Donate\",\n                \"value\": \"Donate\"\n              },\n              {\n                \"displayValue\": \"FindLocation\",\n                \"value\": \"FindLocation\"\n              },\n              {\n                \"displayValue\": \"InitiateCheckout\",\n                \"value\": \"InitiateCheckout\"\n              },\n              {\n                \"displayValue\": \"Lead\",\n                \"value\": \"Lead\"\n              },\n              {\n                \"displayValue\": \"Purchase\",\n                \"value\": \"Purchase\"\n              },\n              {\n                \"displayValue\": \"Schedule\",\n                \"value\": \"Schedule\"\n              },\n              {\n                \"displayValue\": \"Search\",\n                \"value\": \"Search\"\n              },\n              {\n                \"displayValue\": \"StartTrial\",\n                \"value\": \"StartTrial\"\n              },\n              {\n                \"displayValue\": \"SubmitApplication\",\n                \"value\": \"SubmitApplication\"\n              },\n              {\n                \"displayValue\": \"Subscribe\",\n                \"value\": \"Subscribe\"\n              },\n              {\n                \"displayValue\": \"ViewContent\",\n                \"value\": \"ViewContent\"\n              }\n            ],\n            \"simpleValueType\": true,\n            \"defaultValue\": \"PageView\"\n          }\n        ]\n      },\n      {\n        \"value\": \"custom\",\n        \"displayValue\": \"Custom\",\n        \"subParams\": [\n          {\n            \"type\": \"TEXT\",\n            \"name\": \"customEventName\",\n            \"displayName\": \"\",\n            \"simpleValueType\": true\n          }\n        ]\n      },\n      {\n        \"value\": \"variable\",\n        \"displayValue\": \"Variable\",\n        \"subParams\": [\n          {\n            \"type\": \"SELECT\",\n            \"name\": \"variableEventName\",\n            \"macrosInSelect\": true,\n            \"selectItems\": [],\n            \"simpleValueType\": true\n          }\n        ]\n      }\n    ],\n    \"simpleValueType\": true,\n    \"enablingConditions\": [\n      {\n        \"paramName\": \"enhancedEcommerce\",\n        \"paramValue\": true,\n        \"type\": \"NOT_EQUALS\"\n      }\n    ]\n  },\n  {\n    \"type\": \"RADIO\",\n    \"name\": \"eecEventName\",\n    \"displayName\": \"Event Name\",\n    \"radioItems\": [\n      {\n        \"value\": \"eec\",\n        \"displayValue\": \"Set automatically from dataLayer\"\n      }\n    ],\n    \"simpleValueType\": true,\n    \"help\": \"The Enhanced Ecommerce integration populates the Event Name automatically depending on what type of \\u003cstrong\\u003eecommerce\\u003c/strong\\u003e object was last pushed into dataLayer (\\\"detail\\\" -\\u003e \\\"ViewContent\\\", \\\"add\\\" -\\u003e \\\"AddToCart\\\", \\\"checkout\\\" -\\u003e \\\"InitiateCheckout\\\", \\\"purchase\\\" -\\u003e \\\"Purchase\\\").\",\n    \"enablingConditions\": [\n      {\n        \"paramName\": \"enhancedEcommerce\",\n        \"paramValue\": true,\n        \"type\": \"EQUALS\"\n      }\n    ]\n  },\n  {\n    \"type\": \"SELECT\",\n    \"name\": \"consent\",\n    \"displayName\": \"Consent Granted (GDPR)\",\n    \"macrosInSelect\": true,\n    \"selectItems\": [\n      {\n        \"value\": true,\n        \"displayValue\": \"True\"\n      },\n      {\n        \"value\": false,\n        \"displayValue\": \"False\"\n      }\n    ],\n    \"simpleValueType\": true,\n    \"help\": \"If you set Consent Granted to \\u003cstrong\\u003efalse\\u003c/strong\\u003e, the pixel will not send any hits until a tag is fired where Consent Granted is set to \\u003cstrong\\u003etrue\\u003c/strong\\u003e. See \\u003ca href\\u003d\\\"https://developers.facebook.com/docs/facebook-pixel/implementation/gdpr/\\\"\\u003ethis article\\u003c/a\\u003e for more information.\"\n  },\n  {\n    \"simpleValueType\": true,\n    \"name\": \"advancedMatching\",\n    \"checkboxText\": \"Enable Advanced Matching\",\n    \"type\": \"CHECKBOX\"\n  },\n  {\n    \"type\": \"GROUP\",\n    \"name\": \"dataProcessingOptionsGroup\",\n    \"displayName\": \"Data Processing Options\",\n    \"groupStyle\": \"ZIPPY_CLOSED\",\n    \"subParams\": [\n      {\n        \"type\": \"LABEL\",\n        \"name\": \"dpoInfo\",\n        \"displayName\": \"Data Processing Options force this Facebook event to comply to regional regulations with regard to the processing and selling of user data. Read \\u003ca href\\u003d\\\"https://developers.facebook.com/docs/marketing-apis/data-processing-options\\\"\\u003ethis\\u003c/a\\u003e for more information about how to configure this section.\"\n      },\n      {\n        \"type\": \"CHECKBOX\",\n        \"name\": \"dpoLDU\",\n        \"checkboxText\": \"Limited Data Use (LDU)\",\n        \"simpleValueType\": true\n      },\n      {\n        \"type\": \"TEXT\",\n        \"name\": \"dpoCountry\",\n        \"displayName\": \"Country\",\n        \"simpleValueType\": true,\n        \"defaultValue\": 0,\n        \"enablingConditions\": [\n          {\n            \"paramName\": \"dpoLDU\",\n            \"paramValue\": true,\n            \"type\": \"EQUALS\"\n          }\n        ],\n        \"valueValidators\": [\n          {\n            \"type\": \"NUMBER\"\n          }\n        ]\n      },\n      {\n        \"type\": \"TEXT\",\n        \"name\": \"dpoState\",\n        \"displayName\": \"State\",\n        \"simpleValueType\": true,\n        \"defaultValue\": 0,\n        \"enablingConditions\": [\n          {\n            \"paramName\": \"dpoLDU\",\n            \"paramValue\": true,\n            \"type\": \"EQUALS\"\n          }\n        ],\n        \"valueValidators\": [\n          {\n            \"type\": \"NUMBER\"\n          }\n        ]\n      }\n    ]\n  },\n  {\n    \"enablingConditions\": [\n      {\n        \"paramName\": \"advancedMatching\",\n        \"type\": \"EQUALS\",\n        \"paramValue\": true\n      }\n    ],\n    \"displayName\": \"Customer Information Data Parameters\",\n    \"name\": \"advancedMatchingGroup\",\n    \"groupStyle\": \"ZIPPY_CLOSED\",\n    \"type\": \"GROUP\",\n    \"subParams\": [\n      {\n        \"displayName\": \"\",\n        \"name\": \"advancedMatchingList\",\n        \"simpleTableColumns\": [\n          {\n            \"selectItems\": [\n              {\n                \"displayValue\": \"City\",\n                \"value\": \"ct\"\n              },\n              {\n                \"displayValue\": \"Country\",\n                \"value\": \"cn\"\n              },\n              {\n                \"displayValue\": \"Date of Birth\",\n                \"value\": \"db\"\n              },\n              {\n                \"displayValue\": \"Email\",\n                \"value\": \"em\"\n              },\n              {\n                \"displayValue\": \"External ID\",\n                \"value\": \"external_id\"\n              },\n              {\n                \"displayValue\": \"First Name\",\n                \"value\": \"fn\"\n              },\n              {\n                \"displayValue\": \"Gender\",\n                \"value\": \"ge\"\n              },\n              {\n                \"displayValue\": \"Last Name\",\n                \"value\": \"ln\"\n              },\n              {\n                \"displayValue\": \"Phone\",\n                \"value\": \"ph\"\n              },\n              {\n                \"displayValue\": \"State\",\n                \"value\": \"st\"\n              },\n              {\n                \"displayValue\": \"Zip Code\",\n                \"value\": \"zp\"\n              }\n            ],\n            \"defaultValue\": \"\",\n            \"displayName\": \"Parameter name\",\n            \"name\": \"name\",\n            \"isUnique\": true,\n            \"type\": \"SELECT\"\n          },\n          {\n            \"defaultValue\": \"\",\n            \"displayName\": \"Parameter value\",\n            \"name\": \"value\",\n            \"type\": \"TEXT\"\n          }\n        ],\n        \"type\": \"SIMPLE_TABLE\",\n        \"newRowButtonText\": \"Add parameter\",\n        \"valueValidators\": [\n          {\n            \"type\": \"NON_EMPTY\"\n          }\n        ]\n      }\n    ]\n  },\n  {\n    \"displayName\": \"Object Properties\",\n    \"name\": \"objectPropertiesGroup\",\n    \"groupStyle\": \"ZIPPY_CLOSED\",\n    \"type\": \"GROUP\",\n    \"subParams\": [\n      {\n        \"type\": \"LABEL\",\n        \"name\": \"enhancedEcommerceObject\",\n        \"displayName\": \"\\u003cstrong\\u003eWarning!\\u003c/strong\\u003e Object properties are populated automatically based on the most recent \\u003cstrong\\u003eecommerce\\u003c/strong\\u003e object pushed into dataLayer. If you add properties here that are already set by the integration (content_type, contents, num_items, value, currency), then the properties you add here will override those set automatically by the integration!\",\n        \"enablingConditions\": [\n          {\n            \"paramName\": \"enhancedEcommerce\",\n            \"paramValue\": true,\n            \"type\": \"EQUALS\"\n          }\n        ]\n      },\n      {\n        \"type\": \"SELECT\",\n        \"name\": \"objectPropertiesFromVariable\",\n        \"displayName\": \"Load Properties From Variable\",\n        \"macrosInSelect\": true,\n        \"selectItems\": [\n          {\n            \"value\": false,\n            \"displayValue\": \"False\"\n          }\n        ],\n        \"simpleValueType\": true,\n        \"help\": \"You can use a variable that returns a JavaScript object with the properties you want to use. This object will be merged with any additional properties you add via the table below. Any conflicts will be resolved in favor of the properties you add to the table.\"\n      },\n      {\n        \"name\": \"objectPropertyList\",\n        \"simpleTableColumns\": [\n          {\n            \"valueValidators\": [],\n            \"defaultValue\": \"\",\n            \"displayName\": \"Property Name\",\n            \"name\": \"name\",\n            \"isUnique\": true,\n            \"type\": \"TEXT\"\n          },\n          {\n            \"defaultValue\": \"\",\n            \"displayName\": \"Property Value\",\n            \"name\": \"value\",\n            \"type\": \"TEXT\"\n          }\n        ],\n        \"type\": \"SIMPLE_TABLE\",\n        \"newRowButtonText\": \"Add property\"\n      }\n    ]\n  },\n  {\n    \"displayName\": \"More Settings\",\n    \"name\": \"moreSettingsGroup\",\n    \"groupStyle\": \"ZIPPY_CLOSED\",\n    \"type\": \"GROUP\",\n    \"subParams\": [\n      {\n        \"help\": \"Facebook collects some metadata (e.g. structured data) and user interactions (e.g. clicks) automatically. Check this box to disable this automatic configuration of the pixel.\",\n        \"simpleValueType\": true,\n        \"name\": \"disableAutoConfig\",\n        \"checkboxText\": \"Disable Automatic Configuration\",\n        \"type\": \"CHECKBOX\"\n      },\n      {\n        \"type\": \"CHECKBOX\",\n        \"name\": \"disablePushState\",\n        \"checkboxText\": \"Disable History Event Tracking\",\n        \"simpleValueType\": true,\n        \"help\": \"The Facebook Pixel tracks history events (pushState and replaceState) automatically as PageViews. Check this box to prevent the pixel from tracking such events automatically.\"\n      },\n      {\n        \"type\": \"TEXT\",\n        \"name\": \"eventId\",\n        \"displayName\": \"Event ID\",\n        \"simpleValueType\": true,\n        \"help\": \"Set the Event ID parameter in case you are tracking the same event server-side as well. The Event ID can be used to deduplicate the same event if sent from multiple sources. See more \\u003ca href\\u003d\\\"https://developers.facebook.com/docs/marketing-api/conversions-api/deduplicate-pixel-and-server-events/\\\"\\u003ehere\\u003c/a\\u003e.\"\n      }\n    ]\n  }\n]\n\n\n___SANDBOXED_JS_FOR_WEB_TEMPLATE___\n\nconst createQueue = require('createQueue');\nconst callInWindow = require('callInWindow');\nconst aliasInWindow = require('aliasInWindow');\nconst copyFromWindow = require('copyFromWindow');\nconst setInWindow = require('setInWindow');\nconst injectScript = require('injectScript');\nconst makeTableMap = require('makeTableMap');\nconst makeNumber = require('makeNumber');\nconst getType = require('getType');\nconst copyFromDataLayer = require('copyFromDataLayer');\nconst math = require('Math');\nconst log = require('logToConsole');\n\nconst initIds = copyFromWindow('_fbq_gtm_ids') || [];\nconst pixelIds = data.pixelId;\nconst standardEventNames = ['AddPaymentInfo', 'AddToCart', 'AddToWishlist', 'CompleteRegistration', 'Contact', 'CustomizeProduct', 'Donate', 'FindLocation', 'InitiateCheckout', 'Lead', 'PageView', 'Purchase', 'Schedule', 'Search', 'StartTrial', 'SubmitApplication', 'Subscribe', 'ViewContent'];\nconst ecommerce = copyFromDataLayer('ecommerce', 1);\n\n// Helper methods\nconst fail = msg => {\n  log(msg);\n  data.gtmOnFailure();\n};\n\nconst mergeObj = (obj, obj2) => {\n  for (let key in obj2) {\n    if (obj2.hasOwnProperty(key)) {\n      obj[key] = obj2[key];\n    }\n  }\n  return obj;\n};\n\nconst parseEecObj = prod => {\n  return {\n    id: prod.id,\n    quantity: prod.quantity\n  };\n};\n\n// Initialize EEC integration\nlet eventName, action, eecObjectProps;\nif (data.enhancedEcommerce) {\n  if (!ecommerce) return fail('Facebook Pixel: No valid \"ecommerce\" object found in dataLayer');\n  if (ecommerce.detail) { eventName = 'ViewContent'; action = 'detail'; }\n  else if (ecommerce.add) { eventName = 'AddToCart'; action = 'add'; }\n  else if (ecommerce.checkout) { eventName = 'InitiateCheckout'; action = 'checkout'; }\n  else if (ecommerce.purchase) { eventName = 'Purchase'; action = 'purchase'; }\n  else return fail('Facebook Pixel: Most recently pushed \"ecommerce\" object must be one of types \"detail\", \"add\", \"checkout\" or \"purchase\".');\n  \n  if (!ecommerce[action].products || getType(ecommerce[action].products) !== 'array') return fail('Facebook pixel: Most recently pushed \"ecommerce\" object did not have a valid \"products\" array.');\n  eecObjectProps = {\n    content_type: 'product',\n    contents: ecommerce[action].products.map(parseEecObj),\n    value: ecommerce[action].products.reduce((acc, cur) => {\n      const curVal = math.round(makeNumber(cur.price || 0) * (cur.quantity || 1) * 100) / 100;\n      return acc + curVal;\n    }, 0.0),\n    currency: ecommerce.currencyCode || 'USD'\n  };\n  if (['InitiateCheckout', 'Purchase'].indexOf(eventName) > -1) eecObjectProps.num_items = ecommerce[action].products.reduce((acc,cur) => {\n    return acc + makeNumber(cur.quantity || 1);\n  }, 0);\n}\n\n// Build the fbq() command arguments\nconst cidParams = data.advancedMatchingList && data.advancedMatchingList.length ? makeTableMap(data.advancedMatchingList, 'name', 'value') : {};\nconst objectProps = data.objectPropertyList && data.objectPropertyList.length ? makeTableMap(data.objectPropertyList, 'name', 'value') : {};\nconst objectPropsFromVar = getType(data.objectPropertiesFromVariable) === 'object' ? data.objectPropertiesFromVariable : {};\nconst mergedObjectProps = mergeObj(objectPropsFromVar, objectProps);\nconst finalObjectProps = mergeObj(eecObjectProps || {}, mergedObjectProps);\neventName = eventName || (data.eventName === 'custom' ? data.customEventName : (data.eventName === 'variable' ? data.variableEventName : data.standardEventName));\n\nconst command = standardEventNames.indexOf(eventName) === -1 ? 'trackSingleCustom' : 'trackSingle';\nconst consent = data.consent === false ? 'revoke' : 'grant';\n\n// Utility function to use either fbq.queue[]\n// (if the FB SDK hasn't loaded yet), or fbq.callMethod()\n// if the SDK has loaded.\nconst getFbq = () => {\n  // Return the existing 'fbq' global method if available\n  let fbq = copyFromWindow('fbq');\n  if (fbq) {\n    return fbq;\n  }\n  \n  // Initialize the 'fbq' global method to either use\n  // fbq.callMethod or fbq.queue)\n  setInWindow('fbq', function() {    \n    const callMethod = copyFromWindow('fbq.callMethod.apply');\n    if (callMethod) {           \n      callInWindow('fbq.callMethod.apply', null, arguments); \n    } else {       \n      callInWindow('fbq.queue.push', arguments);\n    }\n  });\n  aliasInWindow('_fbq', 'fbq');\n  \n  // Create the fbq.queue\n  createQueue('fbq.queue');\n    \n  // Return the global 'fbq' method, created above\n  return copyFromWindow('fbq');\n};\n\n// Get reference to the global method\nconst fbq = getFbq();\n\nfbq('consent', consent);\n\n // Set Data Processing Options\nif (data.dpoLDU) {\n  fbq('dataProcessingOptions', ['LDU'], makeNumber(data.dpoCountry), makeNumber(data.dpoState));\n}\n\n// Handle multiple, comma-separated pixel IDs,\n// and initialize each ID if not done already.\npixelIds.split(',').forEach(pixelId => {\n  if (initIds.indexOf(pixelId) === -1) {\n    \n    // If the user has chosen to disable automatic configuration\n    if (data.disableAutoConfig) {\n      fbq('set', 'autoConfig', false, pixelId);\n    }\n    \n    // If the user has chosen to disable pushState and replaceState tracking\n    if (data.disablePushState) {\n      setInWindow('fbq.disablePushState', true);\n    }\n   \t\n    \n    // Initialize pixel and store in global array\n    fbq('init', pixelId, cidParams);\n\n    // Monitoring agent string for Tag Setup\n    fbq('set','agent','tmSimo-GTM-WebTemplate', pixelId);\n\n    initIds.push(pixelId);\n    setInWindow('_fbq_gtm_ids', initIds, true);\n    \n  }\n\n  // Call the fbq() method with the parameters defined earlier\n  if (data.eventId) {\n    fbq(command, pixelId, eventName, finalObjectProps, {eventID: data.eventId});\n  } else {\n    fbq(command, pixelId, eventName, finalObjectProps);\n  }\n});\n\ninjectScript('https://connect.facebook.net/en_US/fbevents.js', data.gtmOnSuccess, data.gtmOnFailure, 'fbPixel');\n\n\n___WEB_PERMISSIONS___\n\n[\n  {\n    \"instance\": {\n      \"key\": {\n        \"publicId\": \"access_globals\",\n        \"versionId\": \"1\"\n      },\n      \"param\": [\n        {\n          \"key\": \"keys\",\n          \"value\": {\n            \"type\": 2,\n            \"listItem\": [\n              {\n                \"type\": 3,\n                \"mapKey\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"key\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"read\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"write\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"execute\"\n                  }\n                ],\n                \"mapValue\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"fbq\"\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": false\n                  }\n                ]\n              },\n              {\n                \"type\": 3,\n                \"mapKey\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"key\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"read\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"write\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"execute\"\n                  }\n                ],\n                \"mapValue\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"_fbq_gtm\"\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": false\n                  }\n                ]\n              },\n              {\n                \"type\": 3,\n                \"mapKey\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"key\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"read\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"write\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"execute\"\n                  }\n                ],\n                \"mapValue\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"_fbq\"\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": false\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": false\n                  }\n                ]\n              },\n              {\n                \"type\": 3,\n                \"mapKey\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"key\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"read\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"write\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"execute\"\n                  }\n                ],\n                \"mapValue\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"_fbq_gtm_ids\"\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": false\n                  }\n                ]\n              },\n              {\n                \"type\": 3,\n                \"mapKey\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"key\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"read\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"write\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"execute\"\n                  }\n                ],\n                \"mapValue\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"fbq.callMethod.apply\"\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": false\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  }\n                ]\n              },\n              {\n                \"type\": 3,\n                \"mapKey\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"key\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"read\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"write\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"execute\"\n                  }\n                ],\n                \"mapValue\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"fbq.queue.push\"\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": false\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": false\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  }\n                ]\n              },\n              {\n                \"type\": 3,\n                \"mapKey\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"key\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"read\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"write\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"execute\"\n                  }\n                ],\n                \"mapValue\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"fbq.queue\"\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": false\n                  }\n                ]\n              },\n              {\n                \"type\": 3,\n                \"mapKey\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"key\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"read\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"write\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"execute\"\n                  }\n                ],\n                \"mapValue\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"fbq.disablePushState\"\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": false\n                  }\n                ]\n              }\n            ]\n          }\n        }\n      ]\n    },\n    \"clientAnnotations\": {\n      \"isEditedByUser\": true\n    },\n    \"isRequired\": true\n  },\n  {\n    \"instance\": {\n      \"key\": {\n        \"publicId\": \"inject_script\",\n        \"versionId\": \"1\"\n      },\n      \"param\": [\n        {\n          \"key\": \"urls\",\n          \"value\": {\n            \"type\": 2,\n            \"listItem\": [\n              {\n                \"type\": 1,\n                \"string\": \"https://connect.facebook.net/en_US/fbevents.js\"\n              }\n            ]\n          }\n        }\n      ]\n    },\n    \"clientAnnotations\": {\n      \"isEditedByUser\": true\n    },\n    \"isRequired\": true\n  },\n  {\n    \"instance\": {\n      \"key\": {\n        \"publicId\": \"logging\",\n        \"versionId\": \"1\"\n      },\n      \"param\": [\n        {\n          \"key\": \"environments\",\n          \"value\": {\n            \"type\": 1,\n            \"string\": \"debug\"\n          }\n        }\n      ]\n    },\n    \"isRequired\": true\n  },\n  {\n    \"instance\": {\n      \"key\": {\n        \"publicId\": \"read_data_layer\",\n        \"versionId\": \"1\"\n      },\n      \"param\": [\n        {\n          \"key\": \"keyPatterns\",\n          \"value\": {\n            \"type\": 2,\n            \"listItem\": [\n              {\n                \"type\": 1,\n                \"string\": \"ecommerce\"\n              }\n            ]\n          }\n        }\n      ]\n    },\n    \"clientAnnotations\": {\n      \"isEditedByUser\": true\n    },\n    \"isRequired\": true\n  }\n]\n\n\n___TESTS___\n\nscenarios:\n- name: Library is injected\n  code: |-\n    // Call runCode to run the template's code.\n    runCode(mockData);\n\n    // Verify that the tag finished successfully.\n    assertApi('injectScript').wasCalledWith(scriptUrl, success, failure, 'fbPixel');\n    assertApi('gtmOnSuccess').wasCalled();\n- name: fbq does not exist - method created\n  code: |-\n    let fbq;\n\n    mock('copyFromWindow', key => {\n      if (key === 'fbq') return fbq;\n    });\n\n    mock('createQueue', key => {});\n\n    mock('setInWindow', (key, val) => {\n      if (key === 'fbq') fbq = val;\n    });\n\n    // Call runCode to run the template's code.\n    runCode(mockData);\n\n    // Verify that the tag finished successfully.\n    assertApi('aliasInWindow').wasCalledWith('_fbq', 'fbq');\n    assertApi('setInWindow').wasCalled();\n    assertApi('gtmOnSuccess').wasCalled();\n- name: fbq exists - method copied\n  code: |-\n    mock('setInWindow', key => {\n      if (key === 'fbq') fail('setInWindow called with fbq even though variable exists');\n    });\n\n    mock('createQueue', key => {});\n\n    // Call runCode to run the template's code.\n    runCode(mockData);\n\n    // Verify that the tag finished successfully.\n    assertApi('gtmOnSuccess').wasCalled();\n- name: makeTableMap called\n  code: |-\n    mockData.advancedMatching = true;\n\n    // Call runCode to run the template's code.\n    runCode(mockData);\n\n    // Verify that the tag finished successfully.\n    assertApi('makeTableMap').wasCalledWith(mockData.advancedMatchingList, 'name', 'value');\n    assertApi('makeTableMap').wasCalledWith(mockData.objectPropertyList, 'name', 'value');\n    assertApi('gtmOnSuccess').wasCalled();\n- name: Consent set\n  code: |-\n    mock('copyFromWindow', key => {\n      if (key === 'fbq') return function() {\n        if (arguments[0] === 'consent') {\n          assertThat(arguments[1], 'Consent set incorrectly').isEqualTo('grant');\n        }\n      };\n    });\n\n    // Call runCode to run the template's code.\n    runCode(mockData);\n\n    // Verify that the tag finished successfully.\n    assertApi('gtmOnSuccess').wasCalled();\n- name: DPO LDU set\n  code: |-\n    mockData.dpoLDU = true;\n    mockData.dpoCountry = '0';\n    mockData.dpoState = '0';\n\n    mock('copyFromWindow', key => {\n      if (key === 'fbq') return function() {\n        if (arguments[0] === 'consent') {\n          assertThat(arguments[1], 'Consent set incorrectly').isEqualTo('grant');\n        }\n        if (arguments[0] === 'dataProcessingOptions') {\n          assertThat(arguments[1], 'LDU array value not set').isEqualTo(['LDU']);\n          assertThat(arguments[2], 'LDU country not set').isEqualTo(0);\n          assertThat(arguments[3], 'LDU state not set').isEqualTo(0);\n        }\n      };\n    });\n\n    // Call runCode to run the template's code.\n    runCode(mockData);\n\n    // Verify that the tag finished successfully.\n    assertApi('gtmOnSuccess').wasCalled();\n- name: DPO LDU not set\n  code: |-\n    mock('copyFromWindow', key => {\n      if (key === 'fbq') return function() {\n        if (arguments[0] === 'consent') {\n          assertThat(arguments[1], 'Consent set incorrectly').isEqualTo('grant');\n        }\n        if (arguments[0] === 'dataProcessingOptions') {\n          fail('dataProcessingOptions called even though DPO was not set');\n        }\n      };\n    });\n\n    // Call runCode to run the template's code.\n    runCode(mockData);\n\n    // Verify that the tag finished successfully.\n    assertApi('gtmOnSuccess').wasCalled();\n- name: Pixel IDs set - do not initialize\n  code: |-\n    mock('copyFromWindow', key => {\n      if (key === '_fbq_gtm_ids') return ['12345', '23456'];\n      if (key === 'fbq') return function() {\n        if (arguments[0] === 'init') fail('init called even though pixel IDs already initialized');\n      };\n    });\n\n    // Call runCode to run the template's code.\n    runCode(mockData);\n\n    // Verify that the tag finished successfully.\n    assertApi('gtmOnSuccess').wasCalled();\n- name: Pixel IDs not set - run init process\n  code: \"let index = 0;\\nlet count = 0;\\nlet _fbq_gtm_ids;\\n\\nmockData.advancedMatching\\\n    \\ = true;\\nmockData.disableAutoConfig = true;\\nmockData.disablePushState = true;\\n\\\n    \\nmock('setInWindow', (key, val) => {\\n  if (key === 'fbq.disablePushState') count\\\n    \\ += 1;\\n  if (key === '_fbq_gtm_ids') _fbq_gtm_ids = val;\\n});\\n\\nconst initObj\\\n    \\ = {\\n  ct: 'Helsinki',\\n  cn: 'Finland',\\n  external_id: 'UserId'\\n};\\n\\nmock('copyFromWindow',\\\n    \\ key => {\\n  if (key === 'fbq') return function() {\\n    if (arguments[0] ===\\\n    \\ 'set' && arguments[1] === 'autoConfig' && arguments[2] === false) {\\n      assertThat(arguments[3],\\\n    \\ 'autoConfig called with incorrect pixelId').isEqualTo(mockData.pixelId.split(',')[index]);\\n\\\n    \\    }\\n    if (arguments[0] === 'set' && arguments[1] === 'agent') {\\n      assertThat(arguments[2],\\\n    \\ 'agent set with invalid value').isEqualTo('tmSimo-GTM-WebTemplate');\\n     \\\n    \\ assertThat(arguments[3], 'agent set with invalid pixel ID').isEqualTo(mockData.pixelId.split(',')[index]);\\n\\\n    \\      index += 1;\\n    }\\n    if (arguments[0] === 'init') {\\n      assertThat(arguments[1],\\\n    \\ 'init called with incorrect pixelId').isEqualTo(mockData.pixelId.split(',')[index]);\\n\\\n    \\      assertThat(arguments[2], 'init called with incorrect initObj').isEqualTo(initObj);\\n\\\n    \\    } \\n  };\\n});\\n\\n// Call runCode to run the template's code.\\nrunCode(mockData);\\n\\\n    \\nassertThat(_fbq_gtm_ids, '_fbq_gtm_ids has incorrect contents').isEqualTo(mockData.pixelId.split(','));\\n\\\n    assertThat(index, 'init called incorrect number of times: ' + index).isEqualTo(2);\\n\\\n    assertThat(count, 'fbq.disablePushState called incorrect number of times: ' +\\\n    \\ count).isEqualTo(2);\\n\\n// Verify that the tag finished successfully.\\nassertApi('gtmOnSuccess').wasCalled();\"\n- name: Send standard event\n  code: \"const eventParams = {\\n  prop1: 'val1',\\n  prop2: 'val2'\\n};\\n\\nlet index\\\n    \\ = 0;\\nmock('copyFromWindow', key => {\\n  if (key === 'fbq') return function()\\\n    \\ {\\n    if (arguments[0] === 'trackSingle') {\\n      assertThat(arguments[1],\\\n    \\ 'trackSingle called with incorrect pixel ID').isEqualTo(mockData.pixelId.split(',')[index]);\\n\\\n    \\      assertThat(arguments[2], 'trackSingle called with incorrect event name').isEqualTo(mockData.standardEventName);\\n\\\n    \\      assertThat(arguments[3], 'trackSingle called with incorrect event parameters').isEqualTo(eventParams);\\n\\\n    \\      index += 1;\\n    }\\n  };\\n});\\n     \\n// Call runCode to run the template's\\\n    \\ code.\\nrunCode(mockData);\\n\\n// Verify that the tag finished successfully.\\n\\\n    assertThat(index, 'trackSingle called incorrect number of times').isEqualTo(2);\\n\\\n    assertApi('gtmOnSuccess').wasCalled();\"\n- name: Send custom event\n  code: \"mockData.eventName = 'custom';\\n\\nconst eventParams = {\\n  prop1: 'val1',\\n\\\n    \\  prop2: 'val2'\\n};\\n\\nlet index = 0;\\nmock('copyFromWindow', key => {\\n  if\\\n    \\ (key === 'fbq') return function() {\\n    if (arguments[0] === 'trackSingleCustom')\\\n    \\ {\\n      assertThat(arguments[1], 'trackSingleCustom called with incorrect pixel\\\n    \\ ID').isEqualTo(mockData.pixelId.split(',')[index]);\\n      assertThat(arguments[2],\\\n    \\ 'trackSingleCustom called with incorrect event name').isEqualTo(mockData.customEventName);\\n\\\n    \\      assertThat(arguments[3], 'trackSingleCustom called with incorrect event\\\n    \\ parameters').isEqualTo(eventParams);\\n      index += 1;\\n    }\\n  };\\n});\\n\\\n    \\     \\n// Call runCode to run the template's code.\\nrunCode(mockData);\\n\\n//\\\n    \\ Verify that the tag finished successfully.\\nassertThat(index, 'trackSingleCustom\\\n    \\ called incorrect number of times').isEqualTo(2);\\nassertApi('gtmOnSuccess').wasCalled();\"\n- name: Send variable event with standard name\n  code: \"mockData.eventName = 'variable';\\nmockData.variableEventName = 'PageView';\\n\\\n    \\nconst eventParams = {\\n  prop1: 'val1',\\n  prop2: 'val2'\\n};\\n\\nlet index =\\\n    \\ 0;\\nmock('copyFromWindow', key => {\\n  if (key === 'fbq') return function()\\\n    \\ {\\n    if (arguments[0] === 'trackSingle') {\\n      assertThat(arguments[1],\\\n    \\ 'trackSingle called with incorrect pixel ID').isEqualTo(mockData.pixelId.split(',')[index]);\\n\\\n    \\      assertThat(arguments[2], 'trackSingle called with incorrect event name').isEqualTo(mockData.variableEventName);\\n\\\n    \\      assertThat(arguments[3], 'trackSingle called with incorrect event parameters').isEqualTo(eventParams);\\n\\\n    \\      index += 1;\\n    }\\n  };\\n});\\n     \\n// Call runCode to run the template's\\\n    \\ code.\\nrunCode(mockData);\\n\\n// Verify that the tag finished successfully.\\n\\\n    assertThat(index, 'trackSingle called incorrect number of times').isEqualTo(2);\\n\\\n    assertApi('gtmOnSuccess').wasCalled();\"\n- name: Send variable event with custom name\n  code: \"mockData.eventName = 'variable';\\nmockData.variableEventName = 'custom';\\n\\\n    \\nconst eventParams = {\\n  prop1: 'val1',\\n  prop2: 'val2'\\n};\\n\\nlet index =\\\n    \\ 0;\\nmock('copyFromWindow', key => {\\n  if (key === 'fbq') return function()\\\n    \\ {\\n    if (arguments[0] === 'trackSingleCustom') {\\n      assertThat(arguments[1],\\\n    \\ 'trackSingleCustom called with incorrect pixel ID').isEqualTo(mockData.pixelId.split(',')[index]);\\n\\\n    \\      assertThat(arguments[2], 'trackSingleCustom called with incorrect event\\\n    \\ name').isEqualTo(mockData.variableEventName);\\n      assertThat(arguments[3],\\\n    \\ 'trackSingleCustom called with incorrect event parameters').isEqualTo(eventParams);\\n\\\n    \\      index += 1;\\n    }\\n  };\\n});\\n     \\n// Call runCode to run the template's\\\n    \\ code.\\nrunCode(mockData);\\n\\n// Verify that the tag finished successfully.\\n\\\n    assertThat(index, 'trackSingleCustom called incorrect number of times').isEqualTo(2);\\n\\\n    assertApi('gtmOnSuccess').wasCalled();\"\n- name: Send event parameters from a variable\n  code: \"mockData.objectPropertiesFromVariable = {\\n  prop1: 'val1',\\n  prop2: 'val2'\\n\\\n    };\\n\\nlet index = 0;\\nmock('copyFromWindow', key => {\\n  if (key === 'fbq') return\\\n    \\ function() {\\n    if (arguments[0] === 'trackSingle') {\\n      assertThat(arguments[1],\\\n    \\ 'trackSingle called with incorrect pixel ID').isEqualTo(mockData.pixelId.split(',')[index]);\\n\\\n    \\      assertThat(arguments[2], 'trackSingle called with incorrect event name').isEqualTo(mockData.standardEventName);\\n\\\n    \\      assertThat(arguments[3], 'trackSingle called with incorrect event parameters').isEqualTo(mockData.objectPropertiesFromVariable);\\n\\\n    \\      index += 1;\\n    }\\n  };\\n});\\n     \\n// Call runCode to run the template's\\\n    \\ code.\\nrunCode(mockData);\\n\\n// Verify that the tag finished successfully.\\n\\\n    assertThat(index, 'trackSingle called incorrect number of times').isEqualTo(2);\\n\\\n    assertApi('gtmOnSuccess').wasCalled();\"\n- name: Enhanced Ecommerce integration fails with invalid object\n  code: |-\n    mockData.enhancedEcommerce = true;\n\n    // Call runCode to run the template's code.\n    runCode(mockData);\n\n    // Verify that the tag finished successfully.\n    assertApi('logToConsole').wasCalledWith('Facebook Pixel: No valid \"ecommerce\" object found in dataLayer');\n    assertApi('gtmOnFailure').wasCalled();\n    assertApi('gtmOnSuccess').wasNotCalled();\n- name: Enhanced Ecommerce integration fails with invalid action\n  code: |-\n    mockData.enhancedEcommerce = true;\n\n    mock('copyFromDataLayer', key => {\n      if (key === 'ecommerce') return {\n        invalid: true\n      };\n    });\n\n    // Call runCode to run the template's code.\n    runCode(mockData);\n\n    // Verify that the tag finished successfully.\n    assertApi('logToConsole').wasCalledWith('Facebook Pixel: Most recently pushed \"ecommerce\" object must be one of types \"detail\", \"add\", \"checkout\" or \"purchase\".');\n    assertApi('gtmOnFailure').wasCalled();\n    assertApi('gtmOnSuccess').wasNotCalled();\n- name: Enhanced Ecommerce ViewContent works\n  code: \"mockData.enhancedEcommerce = true;\\nmockData.objectPropertyList = {};\\n\\n\\\n    mock('copyFromDataLayer', key => {\\n  if (key === 'ecommerce') return {\\n    currencyCode:\\\n    \\ 'EUR',\\n    detail: {\\n      products: mockEec.gtm.products\\n    }\\n  };\\n});\\n\\\n    \\nlet index = 0;\\nmock('copyFromWindow', key => {\\n  if (key === 'fbq') return\\\n    \\ function() {\\n    if (arguments[0] === 'trackSingle') {\\n      assertThat(arguments[1],\\\n    \\ 'trackSingle called with incorrect pixel ID').isEqualTo(mockData.pixelId.split(',')[index]);\\n\\\n    \\      assertThat(arguments[2], 'trackSingle called with incorrect event name').isEqualTo('ViewContent');\\n\\\n    \\      assertThat(arguments[3], 'trackSingle called with incorrect event parameters').isEqualTo(mockEec.fb);\\n\\\n    \\      index += 1;\\n    }\\n  };\\n});\\n     \\n// Call runCode to run the template's\\\n    \\ code.\\nrunCode(mockData);\\n\\n// Verify that the tag finished successfully.\\n\\\n    assertThat(index, 'trackSingle called incorrect number of times').isEqualTo(2);\\n\\\n    assertApi('gtmOnSuccess').wasCalled();\"\n- name: Enhanced Ecommerce AddToCart works\n  code: \"mockData.enhancedEcommerce = true;\\nmockData.objectPropertyList = {};\\n\\n\\\n    mock('copyFromDataLayer', key => {\\n  if (key === 'ecommerce') return {\\n    currencyCode:\\\n    \\ 'EUR',\\n    add: {\\n      products: mockEec.gtm.products\\n    }\\n  };\\n});\\n\\\n    \\nlet index = 0;\\nmock('copyFromWindow', key => {\\n  if (key === 'fbq') return\\\n    \\ function() {\\n    if (arguments[0] === 'trackSingle') {\\n      assertThat(arguments[1],\\\n    \\ 'trackSingle called with incorrect pixel ID').isEqualTo(mockData.pixelId.split(',')[index]);\\n\\\n    \\      assertThat(arguments[2], 'trackSingle called with incorrect event name').isEqualTo('AddToCart');\\n\\\n    \\      assertThat(arguments[3], 'trackSingle called with incorrect event parameters').isEqualTo(mockEec.fb);\\n\\\n    \\      index += 1;\\n    }\\n  };\\n});\\n     \\n// Call runCode to run the template's\\\n    \\ code.\\nrunCode(mockData);\\n\\n// Verify that the tag finished successfully.\\n\\\n    assertThat(index, 'trackSingle called incorrect number of times').isEqualTo(2);\\n\\\n    assertApi('gtmOnSuccess').wasCalled();\"\n- name: Enhanced Ecommerce InitiateCheckout works\n  code: \"mockData.enhancedEcommerce = true;\\nmockEec.fb.num_items = 3;\\nmockData.objectPropertyList\\\n    \\ = {};\\n\\nmock('copyFromDataLayer', key => {\\n  if (key === 'ecommerce') return\\\n    \\ {\\n    currencyCode: 'EUR',\\n    checkout: {\\n      products: mockEec.gtm.products\\n\\\n    \\    }\\n  };\\n});\\n\\nlet index = 0;\\nmock('copyFromWindow', key => {\\n  if (key\\\n    \\ === 'fbq') return function() {\\n    if (arguments[0] === 'trackSingle') {\\n\\\n    \\      assertThat(arguments[1], 'trackSingle called with incorrect pixel ID').isEqualTo(mockData.pixelId.split(',')[index]);\\n\\\n    \\      assertThat(arguments[2], 'trackSingle called with incorrect event name').isEqualTo('InitiateCheckout');\\n\\\n    \\      assertThat(arguments[3], 'trackSingle called with incorrect event parameters').isEqualTo(mockEec.fb);\\n\\\n    \\      index += 1;\\n    }\\n  };\\n});\\n     \\n// Call runCode to run the template's\\\n    \\ code.\\nrunCode(mockData);\\n\\n// Verify that the tag finished successfully.\\n\\\n    assertThat(index, 'trackSingle called incorrect number of times').isEqualTo(2);\\n\\\n    assertApi('gtmOnSuccess').wasCalled();\"\n- name: Enhanced Ecommerce Purchase works\n  code: \"mockData.enhancedEcommerce = true;\\nmockEec.fb.num_items = 3;\\nmockData.objectPropertyList\\\n    \\ = {};\\n\\nmock('copyFromDataLayer', key => {\\n  if (key === 'ecommerce') return\\\n    \\ {\\n    currencyCode: 'EUR',\\n    purchase: {\\n      products: mockEec.gtm.products\\n\\\n    \\    }\\n  };\\n});\\n\\nlet index = 0;\\nmock('copyFromWindow', key => {\\n  if (key\\\n    \\ === 'fbq') return function() {\\n    if (arguments[0] === 'trackSingle') {\\n\\\n    \\      assertThat(arguments[1], 'trackSingle called with incorrect pixel ID').isEqualTo(mockData.pixelId.split(',')[index]);\\n\\\n    \\      assertThat(arguments[2], 'trackSingle called with incorrect event name').isEqualTo('Purchase');\\n\\\n    \\      assertThat(arguments[3], 'trackSingle called with incorrect event parameters').isEqualTo(mockEec.fb);\\n\\\n    \\      index += 1;\\n    }\\n  };\\n});\\n     \\n// Call runCode to run the template's\\\n    \\ code.\\nrunCode(mockData);\\n\\n// Verify that the tag finished successfully.\\n\\\n    assertThat(index, 'trackSingle called incorrect number of times').isEqualTo(2);\\n\\\n    assertApi('gtmOnSuccess').wasCalled();\"\n- name: Object merge with variable and list works\n  code: \"mockData.objectPropertiesFromVariable = {\\n  prop1: 'var1',\\n  prop2: 'var2',\\n\\\n    \\  prop3: 'var3'\\n};\\n\\nconst expected = {\\n  prop1: 'val1',\\n  prop2: 'val2',\\n\\\n    \\  prop3: 'var3'\\n};\\n\\nlet index = 0;\\nmock('copyFromWindow', key => {\\n  if\\\n    \\ (key === 'fbq') return function() {\\n    if (arguments[0] === 'trackSingle')\\\n    \\ {\\n      assertThat(arguments[1], 'trackSingle called with incorrect pixel ID').isEqualTo(mockData.pixelId.split(',')[index]);\\n\\\n    \\      assertThat(arguments[2], 'trackSingle called with incorrect event name').isEqualTo('PageView');\\n\\\n    \\      assertThat(arguments[3], 'trackSingle called with incorrect event parameters').isEqualTo(expected);\\n\\\n    \\      index += 1;\\n    }\\n  };\\n});\\n     \\n// Call runCode to run the template's\\\n    \\ code.\\nrunCode(mockData);\\n\\n// Verify that the tag finished successfully.\\n\\\n    assertThat(index, 'trackSingle called incorrect number of times').isEqualTo(2);\\n\\\n    assertApi('gtmOnSuccess').wasCalled();\"\n- name: Object merge with variable, list and eec works\n  code: \"mockData.enhancedEcommerce = true;\\nmockData.objectPropertiesFromVariable\\\n    \\ = {\\n  content_type: 'product_group'\\n};\\nmockData.objectPropertyList = [{\\n\\\n    \\  name: 'currency',\\n  value: 'USD'\\n}];\\nmockEec.fb.num_items = 3;\\nmockEec.fb.content_type\\\n    \\ = 'product_group';\\nmockEec.fb.currency = 'USD';\\n\\nmock('copyFromDataLayer',\\\n    \\ key => {\\n  if (key === 'ecommerce') return {\\n    currencyCode: 'EUR',\\n  \\\n    \\  purchase: {\\n      products: mockEec.gtm.products\\n    }\\n  };\\n});\\n\\nlet\\\n    \\ index = 0;\\nmock('copyFromWindow', key => {\\n  if (key === 'fbq') return function()\\\n    \\ {\\n    if (arguments[0] === 'trackSingle') {\\n      assertThat(arguments[1],\\\n    \\ 'trackSingle called with incorrect pixel ID').isEqualTo(mockData.pixelId.split(',')[index]);\\n\\\n    \\      assertThat(arguments[2], 'trackSingle called with incorrect event name').isEqualTo('Purchase');\\n\\\n    \\      assertThat(arguments[3], 'trackSingle called with incorrect event parameters').isEqualTo(mockEec.fb);\\n\\\n    \\      index += 1;\\n    }\\n  };\\n});\\n     \\n// Call runCode to run the template's\\\n    \\ code.\\nrunCode(mockData);\\n\\n// Verify that the tag finished successfully.\\n\\\n    assertThat(index, 'trackSingle called incorrect number of times').isEqualTo(2);\\n\\\n    assertApi('gtmOnSuccess').wasCalled();\"\n- name: Send event ID\n  code: \"mockData.eventId = 'eventId';\\n\\nmock('copyFromWindow', key => {\\n  if (key\\\n    \\ === 'fbq') return function() {\\n    if (arguments[0] === 'trackSingle') {\\n\\\n    \\      assertThat(arguments[4], 'eventID not included in hit').isEqualTo({eventID:\\\n    \\ mockData.eventId});\\n    }\\n  };\\n});\\n     \\n// Call runCode to run the template's\\\n    \\ code.\\nrunCode(mockData);\\n\\n// Verify that the tag finished successfully.\\n\\\n    assertApi('gtmOnSuccess').wasCalled();\"\nsetup: \"const mockData = {\\n  pixelId: '12345,23456',\\n  eventName: 'standard',\\n\\\n  \\  standardEventName: 'PageView',\\n  customEventName: 'custom',\\n  variableEventName:\\\n  \\ 'standard',\\n  consent: true,\\n  advancedMatching: false,\\n  advancedMatchingList:\\\n  \\ [{name: 'ct', value: 'Helsinki'},{name: 'cn', value: 'Finland'},{name: 'external_id',\\\n  \\ value: 'UserId'}],\\n  objectPropertiesFromVariable: false,\\n  objectPropertyList:\\\n  \\ [{name: 'prop1', value: 'val1'},{name: 'prop2', value: 'val2'}],\\n  disableAutoConfig:\\\n  \\ false,\\n  disablePushState: false,\\n  enhancedEcommerce: false,\\n  eventId: ''\\n\\\n  };\\n\\nconst mockEec = {\\n  gtm: {  \\n    products: [{\\n      id: 'i1',\\n      name:\\\n  \\ 'n1',\\n      category: 'c1',\\n      price: '1.00',\\n      quantity: 1\\n    },{\\n\\\n  \\      id: 'i2',\\n      name: 'n2',\\n      category: 'c2',\\n      price: '2.00',\\n\\\n  \\      quantity: 2\\n    }]\\n  },\\n  fb: {\\n    content_type: 'product',\\n    contents:\\\n  \\ [{\\n      id: 'i1',\\n      quantity: 1\\n    },{\\n      id: 'i2',\\n      quantity:\\\n  \\ 2\\n    }],\\n    currency: 'EUR',\\n    value: 5.00\\n  }\\n};\\n\\nconst scriptUrl\\\n  \\ = 'https://connect.facebook.net/en_US/fbevents.js';\\n\\n// Create injectScript\\\n  \\ mock\\nlet success, failure;\\nmock('injectScript', (url, onsuccess, onfailure)\\\n  \\ => {\\n  success = onsuccess;\\n  failure = onfailure;\\n  onsuccess();\\n});\\n\\n\\\n  mock('copyFromWindow', key => {\\n  if (key === 'fbq') return () => {};\\n});\"\n\n\n___NOTES___\n\nCreated on 18/05/2019, 21:57:16\n\n\n",
+                "galleryReference": {
+                    "host": "github.com",
+                    "owner": "facebookarchive",
+                    "repository": "GoogleTagManager-WebTemplate-For-FacebookPixel",
+                    "version": "11c004614f6b8f7cc999caabef521086116ce302",
+                    "signature": "de30f66e675f24ef8640cea7175b615c94807fa8f027929f94c3d0b45a520d86"
+                }
+            },
+            {
+                "accountId": "4701768861",
+                "containerId": "33231840",
+                "templateId": "876",
+                "name": "backTrack - dataLayer Event Re-Pusher",
+                "fingerprint": "1741949552335",
+                "templateData": "___TERMS_OF_SERVICE___\n\nBy creating or modifying this file you agree to Google Tag Manager's Community\nTemplate Gallery Developer Terms of Service available at\nhttps://developers.google.com/tag-manager/gallery-tos (or such other URL as\nGoogle may provide), as modified from time to time.\n\n\n___INFO___\n\n{\n  \"type\": \"TAG\",\n  \"id\": \"cvt_M3K8T\",\n  \"version\": 1,\n  \"securityGroups\": [],\n  \"displayName\": \"backTrack - dataLayer Event Re-Pusher\",\n  \"categories\": [\n    \"UTILITY\"\n  ],\n  \"brand\": {\n    \"id\": \"github.com_mohrstade\",\n    \"displayName\": \"mohrstade\",\n    \"thumbnail\": \"data:image/png;base64,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\\u003d\"\n  },\n  \"description\": \"Repush dataLayer events that occurred before consent loaded. Find documentation here: https://github.com/mohrstade/backTrack/tree/main\",\n  \"containerContexts\": [\n    \"WEB\"\n  ]\n}\n\n\n___TEMPLATE_PARAMETERS___\n\n[\n  {\n    \"type\": \"TEXT\",\n    \"name\": \"positive_regex\",\n    \"displayName\": \"Event Whitelist Regex\",\n    \"simpleValueType\": true,\n    \"defaultValue\": \"^(?!gtm|consent|Optanon|OneTrust|cookie_consent).*$\",\n    \"help\": \"Event names that match this pattern will be repushed\"\n  },\n  {\n    \"type\": \"RADIO\",\n    \"name\": \"prevent_recursive_merge\",\n    \"displayName\": \"Prevent Recursive Merge (Advanced)\",\n    \"radioItems\": [\n      {\n        \"value\": false,\n        \"displayValue\": \"Off\"\n      },\n      {\n        \"value\": \"specific\",\n        \"displayValue\": \"For specific objects\",\n        \"subParams\": [\n          {\n            \"type\": \"TEXT\",\n            \"name\": \"comma_separated_recursive_merge\",\n            \"displayName\": \"Comma separated list of objects to prevent recursive merge for\",\n            \"simpleValueType\": true,\n            \"textAsList\": false,\n            \"help\": \"eg: ecommerce,cart.items\"\n          }\n        ],\n        \"help\": \"List any complex data type values for which prevent_recursive_merge should be disabled\"\n      }\n    ],\n    \"simpleValueType\": true\n  }\n]\n\n\n___SANDBOXED_JS_FOR_WEB_TEMPLATE___\n\n// Enter your template code here.\nconst log = require('logToConsole');\nconst copyFromWindow = require('copyFromWindow');\nconst createQueue = require('createQueue');\nconst dataLayerPush = createQueue('dataLayer');\nconst makeString = require('makeString');\nconst copyFromDataLayer = require('copyFromDataLayer');\nconst callLater = require('callLater');\nconst setInWindow = require('setInWindow');\n\nlog('data =', data);\n\n//Check if backTrack has already fired/is firing by looking for artificial/natural pushType\nlet alreadyFired = copyFromWindow('repushdataLayer');\n\nif (!alreadyFired) {\n\n    //Copy the dataLayer and filter out pushes without the event key\n    let dataLayer = copyFromWindow('dataLayer').filter(key => key && key.event);\n\n    //Starting at the beginning of the datayer\n    const starting_point = 0;\n\n    // Find the id of the current event.\n    const ending_point = copyFromDataLayer('gtm.uniqueEventId');\n    log({ending_point: ending_point});\n    //Only use dataLayer pushes between current event and the first one.\n    //log({before: dataLayer});\n    dataLayer = dataLayer.filter(item => item['gtm.uniqueEventId'] < ending_point);\n\n    //log({after: dataLayer});\n\n    // Filter for events matching the user provided REGEX\n    dataLayer = dataLayer.filter(key => key.event.match(data.positive_regex));\n\n    //If prevent_recursive_merge is active - convert the provided string into an array\n    if (data.prevent_recursive_merge === 'specific') {\n        var recursive_merge_list = data.comma_separated_recursive_merge.split(',');\n    }\n  \n     //Check if the prevent_recursive merge array is present and push nulls if any are found in events\n    var recursive_merge = function(current_element){\n          if (recursive_merge && recursive_merge_list && recursive_merge_list.length > 0) {\n                let objects = recursive_merge_list.filter(key => typeof(current_element[key]) === 'object');\n                log(objects);\n                let pushobject = {};\n                if (objects.length > 0) {\n                    objects.forEach(object => pushobject[object] = null);\n                    return pushobject;\n                }\n            }\n            };\n\n    //Confirm we have events to push\n    if (dataLayer.length > 0) {\n        dataLayer.forEach(function(element) {\n            //Clear the event ID so that the events are treated as new events\n            element[\"gtm.uniqueEventId\"] = undefined;\n            //Set pushType to artificial to allow for easier debugging\n            element.pushType = \"artificial\";\n            log('Repeat DataLayer Events Tag - Repushing event: ' + element.event);\n            //Repush the event\n            callLater(()=>\n                      recursive_merge(element) && dataLayerPush(recursive_merge(element))\n                      );\n            callLater(()=>\n                      dataLayerPush(element));\n        });\n            callLater(()=>dataLayerPush({\n              backTrack_fired : true,\n              pushType: undefined}));\n\n\n    }\n    setInWindow('repushdataLayer', true, false);\n} else {\n  log('backTrack aborted - tag has already fired');\n}\n// Call data.gtmOnSuccess when the tag is finished.\ndata.gtmOnSuccess();\n\n\n___WEB_PERMISSIONS___\n\n[\n  {\n    \"instance\": {\n      \"key\": {\n        \"publicId\": \"logging\",\n        \"versionId\": \"1\"\n      },\n      \"param\": [\n        {\n          \"key\": \"environments\",\n          \"value\": {\n            \"type\": 1,\n            \"string\": \"debug\"\n          }\n        }\n      ]\n    },\n    \"clientAnnotations\": {\n      \"isEditedByUser\": true\n    },\n    \"isRequired\": true\n  },\n  {\n    \"instance\": {\n      \"key\": {\n        \"publicId\": \"access_globals\",\n        \"versionId\": \"1\"\n      },\n      \"param\": [\n        {\n          \"key\": \"keys\",\n          \"value\": {\n            \"type\": 2,\n            \"listItem\": [\n              {\n                \"type\": 3,\n                \"mapKey\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"key\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"read\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"write\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"execute\"\n                  }\n                ],\n                \"mapValue\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"dataLayer\"\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  }\n                ]\n              },\n              {\n                \"type\": 3,\n                \"mapKey\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"key\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"read\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"write\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"execute\"\n                  }\n                ],\n                \"mapValue\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"repushdataLayer\"\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": false\n                  }\n                ]\n              }\n            ]\n          }\n        }\n      ]\n    },\n    \"clientAnnotations\": {\n      \"isEditedByUser\": true\n    },\n    \"isRequired\": true\n  },\n  {\n    \"instance\": {\n      \"key\": {\n        \"publicId\": \"read_data_layer\",\n        \"versionId\": \"1\"\n      },\n      \"param\": [\n        {\n          \"key\": \"allowedKeys\",\n          \"value\": {\n            \"type\": 1,\n            \"string\": \"specific\"\n          }\n        },\n        {\n          \"key\": \"keyPatterns\",\n          \"value\": {\n            \"type\": 2,\n            \"listItem\": [\n              {\n                \"type\": 1,\n                \"string\": \"gtm.uniqueEventId\"\n              },\n              {\n                \"type\": 1,\n                \"string\": \"pushType\"\n              },\n              {\n                \"type\": 1,\n                \"string\": \"backTrack_fired\"\n              }\n            ]\n          }\n        }\n      ]\n    },\n    \"clientAnnotations\": {\n      \"isEditedByUser\": true\n    },\n    \"isRequired\": true\n  }\n]\n\n\n___TESTS___\n\nscenarios:\n- name: no data pushes before consent\n  code: |-\n    const dataLayer = [\n        {\n            \"usc_origin\": \"from local storage\",\n            \"event\": \"consents_initialized\",\n            \"gtm.uniqueEventId\": 1\n        },\n        {\n            \"event\": \"test\",\n            \"gtm.uniqueEventId\": 8\n        }\n    ];\n\n    mock('copyFromWindow', key => {\n      if (key === 'dataLayer'){\n      return dataLayer;\n      }\n      if(key === 'repushdataLayer') {\n        return false;\n      }\n    });\n\n    mock(\"callLater\", (callback) => {\n      fail();\n    });\n\n    // Call runCode to run the template's code.\n    const variableResult = runCode(mockData);\n\n    // Verify that the variable returns a result.\n    assertApi('gtmOnSuccess').wasCalled();\n- name: dataLayer has pushes before consent\n  code: |-\n    let dataLayer = [\n        {\n            \"event\": \"page_view\",\n            \"gtm.uniqueEventId\": 1\n        },\n        {\n            \"gtm.start\": 1685100565459,\n            \"event\": \"gtm.js\",\n            \"gtm.uniqueEventId\": 11\n        },\n        {\n            \"event\": \"cookie_consent_preferences\",\n            \"gtm.uniqueEventId\": 16\n        },\n        {\n            \"event\": \"cookie_consent_update\",\n            \"gtm.uniqueEventId\": 30\n        },\n        {\n            \"event\": \"gtm.dom\",\n            \"gtm.uniqueEventId\": 35\n        },\n        {\n            \"event\": \"gtm.load\",\n            \"gtm.uniqueEventId\": 44\n        }\n    ];\n\n    mock('copyFromWindow', key => {\n      if(key === 'repushdataLayer') {\n        return false;\n      }\n       if(key === 'dataLayer') {\n        return dataLayer;\n      }\n    });\n\n    mock('copyFromDataLayer', key => {\n      if (key === 'gtm.uniqueEventId'){\n        return 30;\n      }\n    });\n\n\n    let pushedEvents = [];\n\n    // Mocking the createQueue function to capture pushed events\n    mock(\"createQueue\", function () {\n      return function (event) {\n        log(event);\n        pushedEvents.push(event);\n      };\n    });\n\n    mock(\"callLater\", (callback) => {\n      callback();\n    });\n\n    log(\"dataLayer \",dataLayer);\n\n\n    // Call runCode to run the template's code.\n    runCode(mockData);\n\n    const expectedPushedEvents = [\n      // Define the expected pushed events based on your template logic\n      { event: \"page_view\", pushType: \"artificial\", 'gtm.uniqueEventId': undefined },\n      { backTrack_fired : true, pushType: undefined}\n      // Add other expected pushed events here based on your logic\n    ];\n    log(\"expectedPushedEvents\", expectedPushedEvents);\n    log(\"pushedEvents\", pushedEvents);\n    assertThat(pushedEvents).isEqualTo(expectedPushedEvents);\n\n    // Verify that the tag finished successfully.\n- name: do not run template twice if backTrack_fired is set to true\n  code: |-\n    mock('copyFromDataLayer', key => {\n      if(key === 'backTrack_fired') {\n        return true;\n      }\n      return 30;\n    });\n\n    let dataLayer = [\n        {\n            \"event\": \"page_view\",\n            \"gtm.uniqueEventId\": 1\n        },\n        {\n            \"gtm.start\": 1685100565459,\n            \"event\": \"gtm.js\",\n            \"gtm.uniqueEventId\": 11\n        },\n        {\n            \"event\": \"cookie_consent_preferences\",\n            \"gtm.uniqueEventId\": 16\n        },\n        {\n            \"event\": \"cookie_consent_update\",\n            \"gtm.uniqueEventId\": 30\n        },\n        {\n            \"event\": \"gtm.dom\",\n            \"gtm.uniqueEventId\": 35\n        },\n        {\n            \"event\": \"gtm.load\",\n            \"gtm.uniqueEventId\": 44\n        }\n    ];\n\n\n    mock('copyFromWindow', key => {\n      return dataLayer;\n    });\n\n    mock(\"callLater\", (callback) => {\n      fail();\n    });\n\n    log(\"dataLayer \",dataLayer);\n\n\n    // Call runCode to run the template's code.\n    runCode(mockData);\n\n\n    // Verify that the tag finished successfully.\nsetup: \"const log = require('logToConsole');\\n\\nconst mockData = {\\n  positive_regex:\\\n  \\ \\\"^(?!gtm|consent|Optanon|OneTrust|cookie_consent).*$\\\" \\n};\"\n\n\n___NOTES___\n\nSet firing to once per page\n\n\n",
+                "galleryReference": {
+                    "host": "github.com",
+                    "owner": "mohrstade",
+                    "repository": "backTrack",
+                    "version": "deab67ae25705e4bad724173e5171e76b6ff1f26",
+                    "signature": "fbeb73a5d1f401990e6300b0e4989b6ddfa807bdb8e5fb1257f2d76c40904995",
+                    "galleryTemplateId": "M3K8T"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,160 @@
+# Steps used in BQ Use Cases I and II
+
+With 
+pages as 
+(
+SELECT user_pseudo_id, event_timestamp, (select value.int_value from unnest(event_params) where key="ga_session_id") as session_id, (select value.string_value from unnest(event_params) where key="page_location") as page FROM `artful-shelter-265814.analytics_249501303.events_2022*` where event_name="page_view"
+)
+
+SELECT distinct "user" as dimension, a.user_pseudo_id as firstpageview, b.user_pseudo_id as product, c.user_pseudo_id as purchase FROM
+(
+SELECT user_pseudo_id from pages
+) as A
+LEFT JOIN
+(
+SELECT user_pseudo_id from pages where page like "%product=%"
+) as B
+ON A.user_pseudo_id=B.user_pseudo_id
+LEFT JOIN
+(
+SELECT user_pseudo_id from pages where page like "%order-received=%"
+)as C
+ON B.user_pseudo_id=C.user_pseudo_id
+
+
+
+With 
+pages as 
+(
+SELECT user_pseudo_id, event_timestamp, (select value.int_value from unnest(event_params) where key="ga_session_id") as session_id, (select value.string_value from unnest(event_params) where key="page_location") as page FROM `artful-shelter-265814.analytics_249501303.events_2022*` where event_name="page_view"
+)
+
+SELECT distinct "user" as dimension, IF(a.user_pseudo_id is null, "entry", "prevpage") 
+as breakdowndimension, a.user_pseudo_id as firstpageview, b.user_pseudo_id as product, 
+c.user_pseudo_id as purchase FROM
+(
+SELECT user_pseudo_id from pages where page like "%utm_source=%"
+) as A
+RIGHT JOIN
+(
+SELECT user_pseudo_id from pages where page like "%product=%"
+) as B
+ON A.user_pseudo_id=B.user_pseudo_id
+LEFT JOIN
+(
+SELECT user_pseudo_id from pages where page like "%order-received=%"
+)as C
+ON B.user_pseudo_id=C.user_pseudo_id
+
+
+With 
+pages as 
+(
+SELECT user_pseudo_id, event_timestamp, (select value.int_value from unnest(event_params) where key="ga_session_id") as session_id, (select value.string_value from unnest(event_params) where key="page_location") as page FROM `artful-shelter-265814.analytics_249501303.events_2022*` where event_name="page_view"
+),
+segment as 
+(
+SELECT distinct user_pseudo_id FROM `artful-shelter-265814.analytics_249501303.events_2022*` where user_ltv.revenue>0
+)
+
+SELECT distinct "user" as dimension, IF(a.user_pseudo_id is null, "entry", "prevpage") as breakdowndimension, a.user_pseudo_id as firstpageview, b.user_pseudo_id as product, c.user_pseudo_id as purchase FROM
+(
+SELECT user_pseudo_id from pages where page like "%utm_source=%"
+) as A
+LEFT JOIN
+(
+SELECT user_pseudo_id from pages where page like "%product=%"
+) as B
+ON A.user_pseudo_id=B.user_pseudo_id
+LEFT JOIN
+(
+SELECT user_pseudo_id from pages where page like "%order-received=%"
+)as C
+ON B.user_pseudo_id=C.user_pseudo_id
+JOIN
+(
+Select user_pseudo_id from segment
+) as D
+ON A.user_pseudo_id=d.user_pseudo_id
+
+
+With 
+pages as 
+(
+SELECT user_pseudo_id, event_timestamp, (select value.int_value from unnest(event_params) where key="ga_session_id") as session_id, (select value.string_value from unnest(event_params) where key="page_location") as page FROM `artful-shelter-265814.analytics_249501303.events_2022*` where event_name="page_view"
+),
+segment as 
+(
+SELECT distinct user_pseudo_id FROM `artful-shelter-265814.analytics_249501303.events_2022*` where user_ltv.revenue>0
+)
+
+SELECT distinct "user" as dimension, IF(a.user_pseudo_id is null, "entry", "prevpage") as breakdowndimension, a.user_pseudo_id as firstpageview, b.user_pseudo_id as product, c.user_pseudo_id as purchase FROM
+(
+SELECT user_pseudo_id from pages
+) as A
+LEFT JOIN
+(
+SELECT user_pseudo_id from pages where page like "%product=%"
+) as B
+ON A.user_pseudo_id=B.user_pseudo_id
+LEFT JOIN
+(
+SELECT user_pseudo_id from pages where page like "%order-received=%"
+)as C
+ON B.user_pseudo_id=C.user_pseudo_id
+JOIN
+(
+Select user_pseudo_id from segment
+) as D
+ON C.user_pseudo_id=d.user_pseudo_id
+
+
+With 
+pages as 
+(
+SELECT user_pseudo_id, event_timestamp, (select value.int_value from unnest(event_params) where key="ga_session_id") as session_id, (select value.string_value from unnest(event_params) where key="page_location") as page FROM `artful-shelter-265814.analytics_249501303.events_2022*` where event_name="page_view"
+),
+segment as 
+(
+SELECT ARRAY(SELECT distinct user_pseudo_id FROM `artful-shelter-265814.analytics_249501303.events_2022*` where user_ltv.revenue>0) as segids
+)
+
+SELECT distinct "user" as dimension, IF(a.user_pseudo_id is null, "entry", "prevpage") as breakdowndimension, a.user_pseudo_id as firstpageview, b.user_pseudo_id as product, c.user_pseudo_id as purchase FROM
+(
+SELECT user_pseudo_id from pages
+) as A
+LEFT JOIN
+(
+SELECT user_pseudo_id from pages where page like "%product=%"
+) as B
+ON A.user_pseudo_id=B.user_pseudo_id
+LEFT JOIN
+(
+SELECT user_pseudo_id from pages where page like "%order-received=%"
+)as C
+ON B.user_pseudo_id=C.user_pseudo_id
+where C.user_pseudo_id IN (SELECT distinct user_pseudo_id FROM `artful-shelter-265814.analytics_249501303.events_2022*` where user_ltv.revenue>0)
+
+
+
+SELECT ARRAY(SELECT distinct user_pseudo_id FROM `artful-shelter-265814.analytics_249501303.events_2022*` where user_ltv.revenue>0)
+
+
+
+
+with cohorttable as 
+(
+select distinct
+  extract(week from timestamp_micros(event_timestamp)) as cohort_week,
+  user_pseudo_id
+from `artful-shelter-265814.analytics_249501303.events_2022*`
+)
+
+select * from
+(
+
+select user_pseudo_id, cohort_week, lead(cohort_week) OVER (PARTITION BY user_pseudo_id ORDER BY cohort_week asc) AS next_week
+
+from cohorttable
+)
+where cohort_week=next_week-1
